@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3-覆蓋效果</title>
+<style>
+	.images {
+		position:relative;
+		width:307px;
+		height:192px;
+	}
+	.images img {
+		position:absolute;
+	}
+	.images .mask {
+		position:absolute;
+		background-color:rgba(0,0,0,0);
+		width:307px;
+		height:192px;
+		z-index:9999;
+		transition:all .3s;
+		text-align:center;
+		line-height:192px;
+		color:#rgba(0,0,0,0);
+		
+	}
+	.images:hover .mask{
+		background-color:rgba(0,0,0,0.8);
+	}
+	.images a {
+		color:rgba(0,0,0,0);
+		transition:all .3s;
+		position:absolute;
+		top:0;
+		right:0;
+		left:0;
+		bottom:0;
+		margin:auto;
+		display:block;
+		font-family:Consolas;
+		text-decoration:none;
+		font-size:1.4em;
+	}
+	.images:hover a {
+		color:rgba(255,255,255,1);
+
+	}
+	
+
+</style>
+</head>
+<div class="images">  
+    <img src="images/01.jpg" width="307" height="192">  
+    <div class="mask">
+    		<a href="#">Read More</a>
+    </div>  
+</div> 
+ 
+
+<body>
+</body>
+</html>
